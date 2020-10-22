@@ -58,7 +58,7 @@ class SearchBox extends Component {
           </div>
           {/* <p>{keyword}</p> */}
           <div className="row center">
-            <div className="col-md-8">
+            <div className="col">
               <form className="input-group mb-3" onSubmit={this.handleSubmit}>
                 <input
                   type="text"

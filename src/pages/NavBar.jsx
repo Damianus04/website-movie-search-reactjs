@@ -23,7 +23,7 @@ class NavBar extends Component {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
                 <a className="nav-item nav-link active" href="#">
-                  Search Movie{" "}
+                  Search Movie
                 </a>
               </div>
             </div>

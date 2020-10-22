@@ -2,6 +2,8 @@ import React, { Component, Fragment } from "react";
 import DisplayMovie from "../pages/SearchBoxResult";
 import NavBar from "../pages/NavBar";
 import SearchBox from "../pages/SearchBox";
+import Hero from "./Hero";
+import ErrorBoundary from "./ErrorBoundary";
 // import TutorialInputForm from "../pages/TutorialInputForm";
 
 class Home extends Component {
@@ -9,8 +11,13 @@ class Home extends Component {
     return (
       <Fragment>
         {/* <TutorialInputForm /> */}
-        <NavBar />
-        <SearchBox />
+        <ErrorBoundary>
+          <NavBar />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <SearchBox />
+        </ErrorBoundary>
+        
       </Fragment>
     );
   }

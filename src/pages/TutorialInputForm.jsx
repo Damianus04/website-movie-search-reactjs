@@ -33,7 +33,9 @@ class TutorialInputForm extends Component {
     const { fullName } = this.state;
     return (
       <div>
-        <h1>Forms and Inputs</h1>
+        <h1>Forms and Inputs
+          
+        </h1>
         <p>Full name is: {fullName}</p>
         <form onSubmit={this.handleSubmit}>
           <p>
@@ -44,9 +46,12 @@ class TutorialInputForm extends Component {
               onChange={this.handleInputChange}
             />
           </p>
+
+          
           <p>
             <button>Send Message</button>
           </p>
+          
         </form>
       </div>
     );
