@@ -98,7 +98,7 @@ class SearchBox extends Component {
                 <input
                   type="text"
                   className="form-control input-keyword"
-                  placeholder="Search Movie."
+                  placeholder="Search Movie..."
                   name="keyword"
                   onChange={this.handleKeyword}
                 />
