@@ -46,10 +46,45 @@ class SearchBox extends Component {
     });
   };
 
+  // without error information result
+  // handleHTMLResult = () => {
+  //   return(
+  //     <div className="row movie-container">
+  //       {this.state.post && this.state.post.map((post) => {
+  //       return (
+  //         <SearchBoxResult key={post.imdbID}
+  //           title={post.Title}
+  //           year={post.Year}
+  //           poster={post.Poster}
+  //         />
+  //       );
+  //     })}
+  //   </div> 
+  //   );   
+  // }
+
+  // with error information result
+  handleHTMLResult = () => {
+    return(
+      <div className="row movie-container">
+        {this.state.post ? 
+        this.state.post.map((post) => {
+          return (
+            <SearchBoxResult key={post.imdbID}
+              title={post.Title}
+              year={post.Year}
+              poster={post.Poster}
+            />
+          );
+        }): "Loading"}
+      </div> 
+    );   
+  }
+  
   render() {
     // const { keyword } = this.state;
     return (
-      <Fragment>
+      <Fragment >
         <div className="container">
           <div className="row mt-5 text-center">
             <div className="col">
@@ -73,17 +108,21 @@ class SearchBox extends Component {
               </form>
             </div>
           </div>
-          <div className="row movie-container">
-            {this.state.post.map((post) => {
+
+
+          {this.handleHTMLResult()}
+          {/* this part is converted to function since if it is stated here, error will occur if no keyword found because map doesnt iterate anythin*/}
+          {/* <div className="row movie-container"> */}
+            {/* {this.state.post.map((post) => {
               return (
-                <SearchBoxResult
+                <SearchBoxResult key={post.imdbID}
                   title={post.Title}
                   year={post.Year}
                   poster={post.Poster}
                 />
               );
-            })}
-          </div>
+            })} */}
+          {/* </div> */}
         </div>
       </Fragment>
     );

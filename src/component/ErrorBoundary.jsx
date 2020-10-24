@@ -26,12 +26,12 @@ export class ErrorBoundary extends Component {
                 <Fragment>
                     <div className="container">
                         <div className="alert alert-warning alert-dismissible fade show">
-                            <h4 class="alert-heading"><i class="fa fa-warning"></i> Warning!</h4>
+                            <h4 className="alert-heading"><i className="fa fa-warning"></i> Warning!</h4>
                             <h3>Something went wrong</h3>
                             <p>check your spelling</p>
                             <hr/>
-                            <p class="mb-0">Once you have filled all the details, click on the 'Next' button to continue.</p>
-                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <p className="mb-0">Once you have filled all the details, click on the 'Next' button to continue.</p>
+                            <button type="button" className="close" data-dismiss="alert">&times;</button>
                         </div>
                     </div>
                 </Fragment>

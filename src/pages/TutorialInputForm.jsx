@@ -46,8 +46,6 @@ class TutorialInputForm extends Component {
               onChange={this.handleInputChange}
             />
           </p>
-
-          
           <p>
             <button>Send Message</button>
           </p>
